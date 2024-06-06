@@ -1,0 +1,100 @@
+---
+import CallToActions from "../ancors/callToActions.astro"
+import Header from '../../React/header.jsx'
+import Rrss from "../ancors/rrss.astro"
+---
+
+<main>
+    <Header client:load/>
+    <section class="hero">
+        <div class="rrss">
+            <Rrss link="#" alt="Facebook" blank={true} src="../../../../public/images/temp/faceIcon.svg" clase="min"/>
+            <Rrss link="#" alt="Instagram" blank={true} src="../../../../public/images/temp/igIcon.svg" clase="min"/>
+            <Rrss link="#" alt="WhatsApp" blank={true} src="../../../../public/images/temp/wppIcon.svg" clase="min"/>
+        </div>
+        <header>
+            <h1>Estudio jurídico Integral</h1>
+            <h2>Mas de 10 años brindando soluciones legales de excelencia</h2>
+        </header>
+        <div class="buttons">
+            <CallToActions blank={false} link="#about" text="Agendar turno" primaryAction={true} styles={false}/>
+            <CallToActions blank={false} link="#about" text="Conocer más"  primaryAction={false} styles={false}/>
+        </div>
+        
+    </section>
+</main> 
+
+<style>
+    .hero{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5em;
+        justify-content: center;
+        padding-inline: var(--paddingsection-inline);
+        padding-bottom: 15em;
+
+        height: 100vh;
+        background: linear-gradient(0deg, var(--firstvalue) 0%, var(--secondvalue) 100%),url('../../../../../images/temp/Estudio-juridico.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 40%;
+        background-attachment: scroll;
+    }
+
+    .hero::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-left: 33px solid transparent;
+        border-top: 370px solid transparent;
+        border-right: 250px solid #ffffff;
+        border-bottom: 50px solid #ffffff;
+    }
+
+    .hero::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-right: 25px solid transparent;
+        border-top: 250px solid transparent;
+        border-left: 130px solid #ffffff;
+        border-bottom: 50px solid #ffffff;
+    }
+
+    .hero header{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .hero h2{
+        font-size: 1.75em;
+        color: white;
+    }
+
+    .hero h1{
+        font-size: 1.5em;
+        font-weight: 100;
+        color: white;
+    }
+
+    .hero .buttons{
+        display: flex;
+        gap: 1em;
+    }
+
+    .rrss{
+        display: flex;
+        gap: .7em;
+        transform: translateY(30px);
+
+    }
+    
+</style>

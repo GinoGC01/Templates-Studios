@@ -1,0 +1,28 @@
+---
+interface Props {
+	src: string;
+    alt:string;
+    link: string;
+    blank: boolean;
+    clase: string
+}
+
+const { src, link, alt, blank, clase} = Astro.props;
+---
+
+<a href={link} target={blank ? '_blank' : '_self'} class={clase}>
+    <img src={src} alt={alt} title={alt}>
+</a>
+<style>
+    .min img{
+        width: 1.2em;
+    }
+
+    .med img{
+        width: 1.5em;
+    }
+
+    .max img{
+        width: 1.7em;
+    }
+</style>
