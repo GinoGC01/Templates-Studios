@@ -1,0 +1,144 @@
+---
+interface Props {
+	info: any;
+}
+
+const {info} = Astro.props
+
+---
+
+<section>
+    <header>
+        <span class="antetitle">{info.anteTitle}</span>
+        <h1 >{info.title}</h1>
+        <span class="date">{info.date}</span>
+    </header>
+    <a href="/#Noticias" class="back">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#fff" d="m12 16l1.4-1.4l-1.6-1.6H16v-2h-4.2l1.6-1.6L12 8l-4 4zm0 6q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"/></svg>
+    </a>
+    <article>
+        <figure>
+            <img src={info.images[0]} alt={`imágen de ${info.title}`} transition:name={`image-${info.images[0]}`}/>
+        </figure>
+        <span>{info.epigrafe[0]}</span>
+        {
+            info.body?.map((parrafo: string) => {
+                return (
+                    <p>{parrafo}</p>
+                )
+            })
+        }
+    </article>
+    <footer class="footer-article_notice">
+        <h3>Palabras claves</h3>
+        <ul>
+            {info.keyWords?.map((keyword:string) => {
+                return(<li>{keyword}</li>)
+            })}
+        </ul>    
+    </footer>        
+</section>
+
+<style>
+    section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+    }
+
+    .back{
+        position: absolute;
+        top: 5em;
+        left: 1em;
+        z-index: 1500;
+    }
+
+    header{
+        position: absolute;
+        z-index: 1000;
+        width: 100%;
+        top: 50vh;
+        transform: translateY(-100%);
+
+        color: white;
+        padding: 10px;
+    }
+
+    .antetitle{
+        font-size: .8em;
+        opacity: .8;
+    }
+
+    h1{
+        margin: 8px 0;
+    }
+
+    .date{
+        font-size: .6em;
+        opacity: .7;
+    }
+
+    figure{
+        position: relative;
+        width: 100%;
+        height: 50vh;
+    }
+
+    figure::after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: var(--secondvalue);
+        background: linear-gradient(0deg, #0000009a  0%, var(--secondvalue) 100%);
+        position: absolute;
+        top: 0;
+    }
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    article > span{
+        padding: 5px;
+        font-size: .8em;
+        opacity: .5;
+    }
+
+
+    p{
+        padding: 20px 10px;
+        line-height: 1.5em;
+    }
+
+    .footer-article_notice{
+        width: 100%;
+        border-top: 1px solid black;
+        padding: 10px 15px;
+        background-color: var(--firstvalue);
+    }
+
+    .footer-article_notice h3{
+        width: 100%;
+        text-align: center;
+        margin-block: 10px ;
+        color:  white;
+    }
+
+    .footer-article_notice ul{
+        display: flex;
+        flex-direction: column;
+        padding-inline: 15px;
+
+    }
+
+    .footer-article_notice li{
+        list-style: disc;
+        color: white;
+    }
+</style>

@@ -1,7 +1,12 @@
 ---
+interface Props {
 
+    srcMaps: string;
+}
+
+const { srcMaps} = Astro.props;
 ---
-<footer>
+<footer class="footer-component">
     <header>
         <h4>Estudios Jurídoco | 'Nombre estudio'</h4>
     </header>
@@ -23,7 +28,13 @@
               <a href="#">Contacto</a>
             </li>
         </ul>
-        <div id="map-footer"></div>
+        <iframe 
+        src={srcMaps} 
+        style="border:0;" 
+        width="100%"
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="copy">
         <p>'Nombre estudio' - Todos los derechos reservados © - 2024</p>
@@ -31,9 +42,8 @@
 </footer>
 
 <style>
-    footer{
+    .footer-component{
         position: relative;
-        margin-top: 20px;
         padding-top: 20px;
         background-color: rgba(0, 0, 0, 0.884);
         display: flex;
@@ -43,7 +53,7 @@
         gap: .5em
         
     }
-    footer header{
+    .footer-component header{
         width: 90%;
         text-align: center;
         padding-bottom: 10px;
@@ -65,7 +75,7 @@
         height: 100%;
     }
 
-    footer ul{
+    .footer-component ul{
         grid-column: 0 / 1;
         display: flex;
         align-items: center;
@@ -76,7 +86,7 @@
 
     }
 
-    footer a{
+    .footer-component a{
         display: block;
         padding: 0px 20px 5px;
 
@@ -92,5 +102,11 @@
 
     .copy p{
         text-wrap: pretty;
+    }
+
+    iframe{
+        display: block;
+        padding: 5px;
+        border-radius: 20px;
     }
 </style>

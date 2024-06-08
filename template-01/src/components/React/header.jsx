@@ -8,13 +8,13 @@ export default function header() {
 
   return (
     <header className="header-principal">
-      <div className="header-principal_logo">
+      <a href="/" className="header-principal_logo">
         <img src="../../../../images/temp/logo-temp-01.svg" alt="logo-temp" />
         <div className="">
           <strong>Estudio Jurídico</strong>
           <p>Nombre estudio</p>
         </div>
-      </div>
+      </a>
       <span className="menu-hamburguesa" onClick={handleNav}>
         <span
           className={

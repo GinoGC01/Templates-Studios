@@ -1,39 +1,27 @@
 ---
-import CallToActions from "../ancors/callToActions.astro"
+import { notices } from "../../../data/notices.js";
+import CardNotice from "../cards/CardNotice.astro";
+
 ---
 
 <section id="Noticias">
     <header>
         <h3>Noticias</h3>
     </header>
-    <article>
-        <header>
-            <h4>Notice</h4>
-            <span>05/06/2024</span>
-        </header>
-        <div>
-            <img src="../../../../public/images/temp/about-01.jpg" alt="">
-            <span>TEMA | <b>Derecho Penal</b></span>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            <div class="button-cta">
-                <CallToActions blank={false} link="#about" text="Ver mas" styles={true} color="#fff" background="rgba(0, 0, 0, 0.5)"/>
-            </div>
-        </div>
-    </article>
-    <article>
-        <header>
-            <h4>Notice</h4>
-            <span>06/06/2024</span>
-        </header>
-        <div>
-            <img src="../../../../public/images/temp/about-02.jpeg" alt="">
-            <span>TEMA | <b>Derecho Laboral</b></span>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            <div class="button-cta">
-                <CallToActions blank={false} link="#about" text="Ver mas" styles={true} color="#fff" background="rgba(0, 0, 0, 0.5)"/>
-            </div>
-        </div>
-    </article>
+    { 
+    notices?.map(notice => {
+        return(
+            <CardNotice 
+            id={notice.id}
+            category={notice.category} 
+            date={notice.date} 
+            images={notice.images} 
+            synthesis={notice.synthesis} 
+            title={notice.title}  />
+        )
+    })
+
+    }
 </section>
 
 <style>
@@ -43,6 +31,7 @@ import CallToActions from "../ancors/callToActions.astro"
         flex-direction: column;
         align-items: center;
         gap: 1em;
+        padding-bottom: 20px;
     }
 
     section > header{
@@ -51,40 +40,6 @@ import CallToActions from "../ancors/callToActions.astro"
         border-bottom: 1px solid black;
     }
 
-    article{
-        display: flex;
-        flex-direction: column;
-        gap: .5em;
-        padding: 15px 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-    }
-    article header{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    article  span{
-        font-weight: 200;
-        font-size: .8em;
-    }
-
-    article > div > span{
-        width: 100%;
-        text-align: start;
-        padding-block: 3px;
-    }
-
-    article div{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        gap: .5em;
-    }
-
-
-    article img{
-        width: 100%;
-    }
+    
 
 </style>
