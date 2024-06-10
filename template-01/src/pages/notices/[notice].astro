@@ -1,19 +1,15 @@
 ---
-import Layout from "../layouts/Layout.astro"
-import Footer from "../components/Astro/sections/Footer.astro"
-import {src} from '../data/map.js'
-import Header from "../components/React/header.jsx"
-import {notices} from '../data/notices.js'
-import Noticia from "../components/Astro/sections/Noticia.astro"
+import Layout from "../../layouts/Layout.astro"
+import Footer from "../../components/Astro/sections/Footer.astro"
+import {src} from '../../data/map.js'
+import Header from "../../components/React/header.jsx"
+import {notices} from '../../data/notices.js'
+import Noticia from "../../components/Astro/sections/Noticia.astro"
 
 
 const {notice} = Astro.params
 
 const info = notices.find(noti => noti.id == notice)
-
-if(!info){
-    return Astro.redirect('/404')
-}
 
 ---
 

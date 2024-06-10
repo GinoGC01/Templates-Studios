@@ -1,0 +1,39 @@
+---
+import { team } from "../../../data/team.js";
+import CardTeam from "../cards/CardTeam.astro";
+---
+
+<section id="Equipo">
+    <header>
+        <h3>Nuestro equipo</h3>
+    </header>
+    <ul>
+        {team?.map(({especialidades, images, nombre, presentacion }) => {
+            const imagen = images[0]
+            return(
+                <CardTeam especialidad={especialidades} img={imagen} nombre={nombre} presentacion={presentacion}/>
+            )
+        })}
+    </ul>
+
+</section>
+
+<style>
+    section{
+        display: flex;
+        flex-direction: column;
+        gap:1em;
+        align-items: center;
+        justify-content: center;
+        padding-inline: var(--paddingsection-inline);
+        margin-bottom: 10px;
+    }
+
+    header h3{
+        font-size: var(--subtitlesection);
+        padding: var(--paddingsubtilteSection);
+        border-bottom: 1px solid black;
+    }
+
+
+</style>

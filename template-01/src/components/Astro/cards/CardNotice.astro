@@ -22,7 +22,7 @@ const { title, category, synthesis, images, date, id  } = Astro.props;
         <span>TEMA | <b>{category}</b></span>
         <p>{synthesis}</p>
         <div class="button-cta">
-            <CallToActions blank={false} link={`/${id}`} text="Ver mas" styles={true} color="#fff" background="rgba(0, 0, 0, 0.5)"/>
+            <CallToActions blank={false} link={`/notices/${id}`} text="Ver mas" styles={true} color="#fff" background="rgba(0, 0, 0, 0.5)"/>
         </div>
     </div>
 </article>
