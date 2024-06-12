@@ -1,0 +1,39 @@
+---
+import { testimonios } from "../../../data/testimonios"
+import TestimoniosSlider from "../../React/SliderTestimonios"
+---
+
+<section class="testimonios-section">
+    <header class="header-section">
+        <h3>Testiomonios</h3>
+    </header>
+    <dir class="slider-container">
+        <TestimoniosSlider testimonios={testimonios} client:load/>
+    </dir>
+</section>
+
+<style>
+        .testimonios-section{
+        display: flex;
+        flex-direction: column;
+        gap:1em;
+        justify-content: center;
+        padding-inline: var(--paddingsection-inline);
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+
+    .header-section h3{
+        font-size: var(--subtitlesection);
+        padding: var(--paddingsubtilteSection);
+        border-bottom: 1px solid black;
+        text-align: center;
+    }
+
+    .slider-container {
+        height: 10em;
+        display: flex;
+        align-items: center;
+    }
+
+</style>

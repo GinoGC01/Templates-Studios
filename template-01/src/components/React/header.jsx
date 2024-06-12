@@ -1,6 +1,13 @@
 import { useState } from "react";
 import "./header.css";
-export default function header() {
+export default function header({
+  home,
+  about,
+  contact,
+  notices,
+  testimonios,
+  equipo,
+}) {
   const [on, setOn] = useState(false);
   const handleNav = () => {
     setOn(!on);
@@ -41,19 +48,22 @@ export default function header() {
       >
         <ul>
           <li>
-            <a href="#">Home</a>
+            <a href={home}>Home</a>
           </li>
           <li>
-            <a href="#Sobre-nosotros">Sobre Nosotros</a>
+            <a href={about}>Sobre Nosotros</a>
           </li>
           <li>
-            <a href="#Noticias">Noticias</a>
+            <a href={notices}>Noticias</a>
           </li>
           <li>
-            <a href="#">Testimonios</a>
+            <a href={equipo}>Nuestro Equipo</a>
           </li>
           <li>
-            <a href="#">Contacto</a>
+            <a href={testimonios}>Testimonios</a>
+          </li>
+          <li>
+            <a href={contact}>Contacto</a>
           </li>
         </ul>
       </nav>

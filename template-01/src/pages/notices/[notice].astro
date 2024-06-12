@@ -14,7 +14,7 @@ const info = notices.find(noti => noti.id == notice)
 ---
 
 <Layout title={info.title}>
-    <Header client:load/>
+	<Header about={'/#Sobre-nosotros'} contact={'/#Contacto'} home={'/'} notices={'/#Noticias'} testimonios={'/#Testimonio'} equipo={'/#Equipo'}client:load/>
     <Noticia info={info}/>
     <Footer srcMaps={src}/>
 </Layout>
