@@ -3,7 +3,7 @@ import { testimonios } from "../../../data/testimonios"
 import TestimoniosSlider from "../../React/SliderTestimonios"
 ---
 
-<section class="testimonios-section">
+<section class="testimonios-section" id="Testimonios">
     <header class="header-section">
         <h3>Testiomonios</h3>
     </header>
@@ -23,11 +23,16 @@ import TestimoniosSlider from "../../React/SliderTestimonios"
         overflow: hidden;
     }
 
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .header-section h3{
         font-size: var(--subtitlesection);
         padding: var(--paddingsubtilteSection);
         border-bottom: 1px solid black;
-        text-align: center;
     }
 
     .slider-container {

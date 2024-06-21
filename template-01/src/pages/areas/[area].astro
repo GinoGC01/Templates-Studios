@@ -1,0 +1,9 @@
+---
+import { areasPracticas } from "../../data/areasPractica"
+
+const {area} = Astro.params
+const info = areasPracticas.find(areaPractica => areaPractica.area == area)
+
+
+---
+<h2>{info.area}</h2>

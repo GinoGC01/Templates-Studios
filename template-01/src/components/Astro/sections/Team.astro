@@ -8,10 +8,10 @@ import CardTeam from "../cards/CardTeam.astro";
         <h3>Nuestro equipo</h3>
     </header>
     <ul>
-        {team?.map(({especialidades, images, nombre, presentacion }) => {
+        {team?.map(({especialidades, images, nombre, presentacion, id }) => {
             const imagen = images[0]
             return(
-                <CardTeam especialidad={especialidades} img={imagen} nombre={nombre} presentacion={presentacion}/>
+                <CardTeam especialidad={especialidades} img={imagen} nombre={nombre} presentacion={presentacion} id={id}/>
             )
         })}
     </ul>

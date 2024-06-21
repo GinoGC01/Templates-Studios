@@ -7,6 +7,7 @@ export default function header({
   notices,
   testimonios,
   equipo,
+  areasLaborales,
 }) {
   const [on, setOn] = useState(false);
   const handleNav = () => {
@@ -15,6 +16,10 @@ export default function header({
 
   return (
     <header className="header-principal">
+      <span
+        className={on ? "span-on-nav span-nav" : "span-off-nav span-nav"}
+        onClick={on ? handleNav : undefined}
+      ></span>
       <a href="/" className="header-principal_logo">
         <img src="../../../../images/temp/logo-temp-01.svg" alt="logo-temp" />
         <div className="">
@@ -52,6 +57,9 @@ export default function header({
           </li>
           <li>
             <a href={about}>Sobre Nosotros</a>
+          </li>
+          <li>
+            <a href={areasLaborales}>Areas Laborales</a>
           </li>
           <li>
             <a href={notices}>Noticias</a>

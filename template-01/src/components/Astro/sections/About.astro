@@ -1,19 +1,31 @@
 ---
+import { dataDescription } from "../../../data/dataDescription";
 
+const {about} = dataDescription
+const {content} = about
 ---
 
 <section id="Sobre-nosotros">
     <header>
-        <h3>Sobre nosotros</h3>
+        <h3>Sobre Nosotros</h3>
     </header>
-    <article>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor beatae sed, delectus ea accusamus, ipsam similique minus placeat odit, quam dignissimos perspiciatis aliquam debitis doloremque minima accusantium! Obcaecati, itaque animi.</p>
-        <img src="../../../../public/images/temp/about-01.jpg" alt="">
-    </article>
-    <article>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor beatae sed, delectus ea accusamus, ipsam similique minus placeat odit, quam dignissimos perspiciatis aliquam debitis doloremque minima accusantium! Obcaecati, itaque animi.</p>
-        <img src="../../../../public/images/temp/about-02.jpeg" alt="">
-    </article>
+    {
+        content?.map((article) => {
+            return(
+                <article>
+                    {article.titleActive && <h4>{article.title}</h4>}
+                    <div>
+                        {article.description?.map(parrafo => {
+                            return(
+                                    <p>{parrafo}</p>
+                            )
+                        })} 
+                    </div>
+                    <img src={article.image} alt={`imágen sobre ${article.title}`}/>
+                </article>
+            )
+        })
+    }
 </section>
 
 <style>
@@ -40,6 +52,11 @@
         align-items: center;
         padding-block: 10px;
 
+    }
+    article h4{
+        text-align:start;
+        width: 100%;
+        font-size: 1.1em
     }
 
     article p{

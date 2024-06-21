@@ -5,16 +5,20 @@ import About from '../components/Astro/sections/About.astro';
 import Notices from '../components/Astro/sections/Notices.astro';
 import Footer from '../components/Astro/sections/Footer.astro';
 import Team from '../components/Astro/sections/Team.astro';
-import { src } from '../data/map.js';
+import { src } from '../data/mapaFooter.js';
 import Testimonies from '../components/Astro/sections/Testimonies.astro';
+import Contact from '../components/Astro/sections/Contact.astro';
+import AreasLaborales from '../components/Astro/sections/AreasLaborales.astro';
 ---
 
 <Layout title="Template-01">
 	<Main/>
 	<About/>
+	<AreasLaborales/>
 	<Notices/>
 	<Team/>
 	<Testimonies/>
+	<Contact/>
 	<Footer srcMaps={src}/>
 </Layout>
 <style is:global>
@@ -26,10 +30,14 @@ import Testimonies from '../components/Astro/sections/Testimonies.astro';
 
 		/* background gradient main */
 		--firstvalue: rgba(8,8,8, .8);
+		--firstvalue1: rgba(8,8,8, .8);
 		--secondvalue: rgba(45, 62, 158, 0.5);
+		--secondvalue08: rgba(45, 62, 158, 0.8);
+
 
 		/* padding sections */
 		--paddingsection-inline:20px;
+		--paddingsection-inline-desktop:200px;
 
 		/* subtitulos */
 

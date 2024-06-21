@@ -3,12 +3,13 @@ interface Props  {
     img:string,
     nombre: string,
     especialidad: string[],
-    presentacion: string
+    presentacion: string,
+    id: string
 }
-const {img, nombre, especialidad, presentacion} = Astro.props
+const {img, nombre, especialidad, presentacion, id} = Astro.props
 import CallToActions from "../ancors/callToActions.astro"
 ---
-<li>
+<li id={id}>
     <figure>
         <img src={img} alt=`Foto de ${nombre}, abogado` transition:name={`image-${nombre}`} loading="lazy"/>
     </figure>

@@ -18,6 +18,7 @@ interface Props{
     imagen: string[]
     posicion:string,
     jurisdiccion:string[]
+    id:string
 
 }
 
@@ -25,14 +26,14 @@ const {nombre, especialidades, contactos, biografia, objetivos, valores,carreras
 
 const RRSS_ICONS = {
     Facebook,
-    LinkedIn
+    LinkedIn                              
 }
 
 ---
 
 <section>
     <span class="back">
-        <a href="/"><Arrow/></a>
+        <a href="/#Equipo"><Arrow/></a>
     </span>
     <figure>
         <img src={imagen[0]} alt={`imágen de perfil del abogado ${nombre}`} /transition:name={`image-${nombre}`} loading="lazy">

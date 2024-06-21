@@ -53,6 +53,18 @@
     left: 0;
 }
 
+.span-on-nav{
+    width: 100%;
+    top: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.span-nav{
+    position: absolute;
+    transition: all .3s;
+}
+
 .header-principal_nav ul{
     display: flex;
     flex-direction: column;

@@ -1,5 +1,6 @@
 export const team = [
   {
+    id: "Nombre-Apellido-1",
     nombre: "Nombre Apellido 1",
     especialidades: ["Abogado Penalista"],
     posicion: "Socio",
@@ -50,6 +51,7 @@ export const team = [
     },
   },
   {
+    id: "Nombre-Apellido-2",
     nombre: "Nombre Apellido 2",
     especialidades: ["Especialidad"],
     posicion: "Socio",
