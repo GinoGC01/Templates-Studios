@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./header.css";
-export default function header({
+import { WhatsApp } from "../../Icons/WhatsApp";
+export default function Header({
   home,
   about,
   contact,
@@ -10,12 +11,35 @@ export default function header({
   areasLaborales,
 }) {
   const [on, setOn] = useState(false);
+  const [scroll, setScroll] = useState(false);
   const handleNav = () => {
     setOn(!on);
   };
 
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      // Si el usuario hace scroll, establecer scroll a true
+      setScroll(true);
+    } else {
+      // Si el usuario está en el inicio de la página, establecer scroll a false
+      setScroll(false);
+    }
+  };
+
+  // Agregar el event listener para el evento scroll
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    // Limpiar el event listener al desmontar el componente
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="header-principal">
+    <header
+      className={scroll ? "header-principal scrolled" : "header-principal"}
+    >
       <span
         className={on ? "span-on-nav span-nav" : "span-off-nav span-nav"}
         onClick={on ? handleNav : undefined}
@@ -52,26 +76,28 @@ export default function header({
         }
       >
         <ul>
-          <li>
+          <li className="action">
             <a href={home}>Home</a>
           </li>
-          <li>
+          <li className="action">
             <a href={about}>Sobre Nosotros</a>
           </li>
-          <li>
+          <li className="action">
             <a href={areasLaborales}>Areas Laborales</a>
           </li>
-          <li>
+          <li className="action">
             <a href={notices}>Noticias</a>
           </li>
-          <li>
+          <li className="action">
             <a href={equipo}>Nuestro Equipo</a>
           </li>
-          <li>
+          <li className="action">
             <a href={testimonios}>Testimonios</a>
           </li>
-          <li>
-            <a href={contact}>Contacto</a>
+          <li className="contact">
+            <a href={contact}>
+              <span>Contacto</span> <WhatsApp />
+            </a>
           </li>
         </ul>
       </nav>

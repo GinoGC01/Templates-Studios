@@ -1,7 +1,7 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { User } from "../../Icons/User";
-import { StarRating } from "./StarRating";
+import { User } from "../../../Icons/User";
+import { StarRating } from "../StarRating";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";

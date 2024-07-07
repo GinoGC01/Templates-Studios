@@ -31,14 +31,31 @@ const { link, blank, clase, color} = Astro.props;
     .min {
         transform: scale(1.4);
     }
+    .min:hover{
+        transform: scale(1.5);
+    }
+
+    .min, .med, .max{
+        transition: transform .15s, opacity .15s;
+    }
+    
+    .min:hover, .med:hover, .max:hover{
+        opacity: .5;
+    }
 
     .med {
         transform: scale(1.7);
+    }
+    .med:hover{
+        transform: scale(1.8);
     }
 
     .max {
         transform: scale(1.9);
 
+    }
+    .max:hover{
+        transform: scale(2.1);
     }
     }
 

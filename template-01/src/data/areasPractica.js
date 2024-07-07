@@ -2,6 +2,7 @@ export const areasPracticas = [
   {
     id: "1",
     nombre: "Derecho Civíl",
+    imagen: "../../../images/temp/area-civil.webp",
     area: "Civil",
     titulo: "Lorem ipsum dolor sit amet",
     subtitulo: "lorem ipsum dolor sit amet, adipisicing elit.",
@@ -13,6 +14,15 @@ export const areasPracticas = [
         title: "Divorcio",
         practicaDescription:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor beatae sed, delectus ea accusamus, ipsam similique minus placeat odit, quam dignissimos perspiciatis aliquam debitis doloremque minima accusantium! Obcaecati, itaque animi.",
+        tipo: [
+          {
+            id: "Divorcio-express",
+            title: "Divorcio Express",
+            descripcion:
+              "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor beatae sed, delectus ea accusamus, ipsam similique minus placeat odit, quam dignissimos perspiciatis aliquam debitis doloremque minima accusantium! Obcaecati, itaque animi.",
+            requisitos: ["item1", "item2", "item3", "item4", "item5"],
+          },
+        ],
       },
       {
         id: "suseciones-testamentos",
@@ -22,7 +32,7 @@ export const areasPracticas = [
       },
       {
         id: "contratos",
-        title: "Contratos de compraventa, leasing, usufructo, permutas.",
+        title: "Contratos de compraventa, leasing, etc.",
         practicaDescription:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor beatae sed, delectus ea accusamus, ipsam similique minus placeat odit, quam dignissimos perspiciatis aliquam debitis doloremque minima accusantium! Obcaecati, itaque animi.",
       },
@@ -40,8 +50,7 @@ export const areasPracticas = [
       },
       {
         id: "incumplimientos",
-        title:
-          "Ejecución de Incumplimientos Contractuales, alquileres, desalojos, usurpaciones, expensas, etc.",
+        title: "Ejecución de Incumplimientos Contractuales",
         practicaDescription:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor beatae sed, delectus ea accusamus, ipsam similique minus placeat odit, quam dignissimos perspiciatis aliquam debitis doloremque minima accusantium! Obcaecati, itaque animi.",
       },
@@ -74,6 +83,7 @@ export const areasPracticas = [
   {
     id: "2",
     area: "Penal",
+    imagen: "../../../images/temp/area-civil.webp",
     nombre: "Derecho Penal",
     titulo: "Lorem ipsum dolor sit amet",
     subtitulo: "lorem ipsum dolor sit amet, adipisicing elit.",
@@ -82,7 +92,7 @@ export const areasPracticas = [
     practicasDepartamento: [
       {
         id: "audiencias",
-        title: "Audiencias Indagatorias – Explicativas – Testimoniales.",
+        title: "Audiencias",
         practicaDescription:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor beatae sed, delectus ea accusamus, ipsam similique minus placeat odit, quam dignissimos perspiciatis aliquam debitis doloremque minima accusantium! Obcaecati, itaque animi.",
       },
@@ -118,8 +128,7 @@ export const areasPracticas = [
       },
       {
         id: "salidas-transitorias",
-        title:
-          "Salidas Transitorias - Libertad Condicional (Morigeración de la pena).",
+        title: "Salidas Transitorias - Libertad Condicional",
         practicaDescription:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor beatae sed, delectus ea accusamus, ipsam similique minus placeat odit, quam dignissimos perspiciatis aliquam debitis doloremque minima accusantium! Obcaecati, itaque animi.",
       },
@@ -134,6 +143,7 @@ export const areasPracticas = [
   {
     id: "3",
     area: "Laboral",
+    imagen: "../../../images/temp/area-laboral.webp",
     nombre: "Derecho Laboral",
     titulo: "Lorem ipsum dolor sit amet",
     subtitulo: "lorem ipsum dolor sit amet, adipisicing elit.",
@@ -142,10 +152,53 @@ export const areasPracticas = [
     practicasDepartamento: [
       {
         id: "trabajo-precario",
-        title:
-          "Trabajo en negro, Trabajo Parcialmente Registrado, Discriminación. Mobbing. Acoso sexual. Acoso Moral.",
+        title: "Trabajo Precario",
         practicaDescription:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor beatae sed, delectus ea accusamus, ipsam similique minus placeat odit, quam dignissimos perspiciatis aliquam debitis doloremque minima accusantium! Obcaecati, itaque animi.",
+        tipo: [
+          {
+            id: "trabajo-en-negro",
+            title: "Trabajo en negro",
+            descripcion:
+              "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor beatae sed, delectus ea accusamus, ipsam similique minus placeat odit, quam dignissimos perspiciatis aliquam debitis doloremque minima accusantium! Obcaecati, itaque animi.",
+            requisitos: ["item1", "item2", "item3", "item4", "item5"],
+          },
+          {
+            id: "trabajo-parcialmente-registrado",
+            title: "Trabajo Parcialmente Registrado",
+            descripcion:
+              "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor beatae sed, delectus ea accusamus, ipsam similique minus placeat odit, quam dignissimos perspiciatis aliquam debitis doloremque minima accusantium! Obcaecati, itaque animi.",
+            requisitos: [],
+          },
+          {
+            id: "trabajo-Discriminación",
+            title: "Discriminación",
+            descripcion:
+              "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor beatae sed, delectus ea accusamus, ipsam similique minus placeat odit, quam dignissimos perspiciatis aliquam debitis doloremque minima accusantium! Obcaecati, itaque animi.",
+            requisitos: ["item1", "item2", "item3", "item4", "item5"],
+          },
+          {
+            id: "trabajo-mobbing",
+            title: "Mobbing",
+            descripcion:
+              "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor beatae sed, delectus ea accusamus, ipsam similique minus placeat odit, quam dignissimos perspiciatis aliquam debitis doloremque minima accusantium! Obcaecati, itaque animi.",
+            requisitos: ["item1", "item2", "item3", "item4", "item5"],
+          },
+          {
+            id: "trabajo-acoso-sexual",
+            title: "Acoso sexual",
+            descripcion:
+              "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor beatae sed, delectus ea accusamus, ipsam similique minus placeat odit, quam dignissimos perspiciatis aliquam debitis doloremque minima accusantium! Obcaecati, itaque animi.",
+            requisitos: ["item1", "item2", "item3", "item4", "item5"],
+          },
+          {
+            id: "trabajo-acoso-moral",
+            title: "Acoso Moral",
+            descripcion:
+              "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor beatae sed, delectus ea accusamus, ipsam similique minus placeat odit, quam dignissimos perspiciatis aliquam debitis doloremque minima accusantium! Obcaecati, itaque animi.",
+            requisitos: ["item1", "item2", "item3", "item4", "item5"],
+          },
+        ],
       },
       {
         id: "despido",
@@ -185,10 +238,25 @@ export const areasPracticas = [
       },
       {
         id: "seguridad-higiene",
-        title:
-          "Seguridad e higiene del trabajo. Enfermedades y accidentes profesionales.",
+        title: "Seguridad e higiene del trabajo",
         practicaDescription:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor beatae sed, delectus ea accusamus, ipsam similique minus placeat odit, quam dignissimos perspiciatis aliquam debitis doloremque minima accusantium! Obcaecati, itaque animi.",
+        tipo: [
+          {
+            id: "seguridad-enfermedades",
+            title: "Enfermedades",
+            descripcion:
+              "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor beatae sed, delectus ea accusamus, ipsam similique minus placeat odit, quam dignissimos perspiciatis aliquam debitis doloremque minima accusantium! Obcaecati, itaque animi.",
+            requisitos: ["item1", "item2", "item3", "item4", "item5"],
+          },
+          {
+            id: "seguridad-accidentes",
+            title: "Accidentes profesionales",
+            descripcion:
+              "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor beatae sed, delectus ea accusamus, ipsam similique minus placeat odit, quam dignissimos perspiciatis aliquam debitis doloremque minima accusantium! Obcaecati, itaque animi.",
+            requisitos: ["item1", "item2", "item3", "item4", "item5"],
+          },
+        ],
       },
     ],
   },

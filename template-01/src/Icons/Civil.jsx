@@ -9,9 +9,9 @@ export function Civil() {
       <g
         fill="none"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="4"
       >
         <path fill="currentColor" d="M19 20a7 7 0 1 0 0-14a7 7 0 0 0 0 14" />
         <path d="M32.608 7A6.996 6.996 0 0 1 36 13a6.996 6.996 0 0 1-3.392 6" />
